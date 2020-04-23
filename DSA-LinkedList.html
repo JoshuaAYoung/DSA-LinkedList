@@ -99,10 +99,10 @@
       let currNode = this.head;
       for (let i = 2; i < position; i++) {
         currNode = currNode.next
-        console.log(currNode)
+        console.log('currnode in loop', currNode)
       }
-      console.log(currNode)
-      console.log(item)
+      console.log('currNode after loop', currNode)
+      console.log('item after loop', item)
       this.insertAfter(item, currNode);
     }
   }
@@ -120,7 +120,7 @@
 
   let SSLList = Main();
   SSLList.insertAfter('humberto', 'Helo')
-  // SSLList.insertAt('Humberto', 4)
+  SSLList.insertAt('Humberto', 4)
   console.log(SSLList)
 
   function display(list) {
@@ -136,7 +136,7 @@
     }
     return count
   }
-  console.log(size(SSLList))
+  // console.log(size(SSLList))
 
   function isEmpty(list) {
     if (list.head === null) {
@@ -161,7 +161,7 @@
     }
     return previousNode;
   }
-  console.log(findPrevious('humberto', SSLList))
+  // console.log(findPrevious('humberto', SSLList))
 
   function findLast(list) {
     if (list.head === null) {
@@ -175,5 +175,5 @@
       return tempNode
     }
   }
-  console.log(findLast(SSLList))
+  // console.log(findLast(SSLList))
 </script>
