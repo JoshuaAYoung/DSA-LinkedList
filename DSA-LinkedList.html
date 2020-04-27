@@ -103,7 +103,7 @@
       }
       console.log('currNode after loop', currNode)
       console.log('item after loop', item)
-      this.insertAfter(item, currNode);
+      this.insertAfter(item, currNode.value);
     }
   }
 
@@ -119,61 +119,61 @@
   }
 
   let SSLList = Main();
-  SSLList.insertAfter('humberto', 'Helo')
+  // SSLList.insertAfter('humberto', 'Helo')
   SSLList.insertAt('Humberto', 4)
   console.log(SSLList)
 
-  function display(list) {
-    console.log(list)
-  }
+//   function display(list) {
+//     console.log(list)
+//   }
 
-  function size(list) {
-    let currNode = list.head;
-    let count = 0;
-    while (currNode !== null) {
-      count++
-      currNode = currNode.next;
-    }
-    return count
-  }
-  // console.log(size(SSLList))
+//   function size(list) {
+//     let currNode = list.head;
+//     let count = 0;
+//     while (currNode !== null) {
+//       count++
+//       currNode = currNode.next;
+//     }
+//     return count
+//   }
+//   // console.log(size(SSLList))
 
-  function isEmpty(list) {
-    if (list.head === null) {
-      return 'empty'
-    }
-    else {
-      return 'not empty'
-    }
-  }
+//   function isEmpty(list) {
+//     if (list.head === null) {
+//       return 'empty'
+//     }
+//     else {
+//       return 'not empty'
+//     }
+//   }
 
-  function findPrevious(item, list) {
-    let currNode = list.head;
-    let previousNode;
-    while (currNode.value !== item) {
-      if (currNode.next === null) {
-        return null
-      }
-      else {
-        previousNode = currNode
-        currNode = currNode.next;
-      }
-    }
-    return previousNode;
-  }
-  // console.log(findPrevious('humberto', SSLList))
+//   function findPrevious(item, list) {
+//     let currNode = list.head;
+//     let previousNode;
+//     while (currNode.value !== item) {
+//       if (currNode.next === null) {
+//         return null
+//       }
+//       else {
+//         previousNode = currNode
+//         currNode = currNode.next;
+//       }
+//     }
+//     return previousNode;
+//   }
+//   // console.log(findPrevious('humberto', SSLList))
 
-  function findLast(list) {
-    if (list.head === null) {
-      return 'no items'
-    }
-    else {
-      let tempNode = list.head;
-      while (tempNode.next !== null) {
-        tempNode = tempNode.next;
-      }
-      return tempNode
-    }
-  }
-  // console.log(findLast(SSLList))
-</script>
+//   function findLast(list) {
+//     if (list.head === null) {
+//       return 'no items'
+//     }
+//     else {
+//       let tempNode = list.head;
+//       while (tempNode.next !== null) {
+//         tempNode = tempNode.next;
+//       }
+//       return tempNode
+//     }
+//   }
+//   // console.log(findLast(SSLList))
+// </script>
